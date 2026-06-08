@@ -1,0 +1,6 @@
+solution/
+.env
+lab.txt
+lab/.venv/
+lab/src/*.egg-info/
+**/__pycache__/
