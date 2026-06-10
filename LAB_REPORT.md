@@ -1,6 +1,6 @@
 # BÁO CÁO KẾT QUẢ BÀI LAB - DAY 10
 ## Đề tài: Data Pipeline And Data Observability for RAG System
-**Họ và tên:** Nguyễn Đức Cường (Mã học viên: 2A202600794 | GitHub: [DucCuong293](https://github.com/DucCuong293))  
+**Họ và tên:** Nguyễn Đức Cường (Mã học viên: 2A202600794 | Lớp: E402 | GitHub: [DucCuong293](https://github.com/DucCuong293))  
 **Thời gian thực hiện:** 10/06/2026
 
 ---
