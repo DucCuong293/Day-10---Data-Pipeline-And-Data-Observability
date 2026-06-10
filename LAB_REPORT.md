@@ -1,6 +1,6 @@
 # BÁO CÁO KẾT QUẢ BÀI LAB - DAY 10
 ## Đề tài: Data Pipeline And Data Observability for RAG System
-**Họ và tên:** Nguyễn Đức Cường (GitHub: [DucCuong293](https://github.com/DucCuong293))  
+**Họ và tên:** Nguyễn Đức Cường (Mã học viên: 2A202600794 | GitHub: [DucCuong293](https://github.com/DucCuong293))  
 **Thời gian thực hiện:** 10/06/2026
 
 ---
@@ -19,12 +19,12 @@ Dự án sử dụng:
 ## 2. Các công việc và Module đã hoàn thiện
 Hệ thống được thiết kế theo dạng mô-đun hóa cao, tách biệt nhiệm vụ rõ ràng:
 
-### 2.1. Module Data Ingestion ([crossref.py](file:///e:/VinUni/Lab/Day%2010%20-%20Data%20Pipeline%20And%20Data%20Observability/Day-10-Data-Pipeline-Data-Observability/src/ingestion/crossref.py))
+### 2.1. Module Data Ingestion ([crossref.py](src/ingestion/crossref.py))
 *   **Hàm `fetch_source_records`:** Gọi API Crossref (`https://api.crossref.org/works`) tải các công trình nghiên cứu dựa trên từ khóa truy vấn cấu hình. Triển khai cơ chế retry thông minh với lũy thừa thời gian chờ khi gặp mã lỗi quá tải HTTP 429 hoặc 503. Tự động lưu phản hồi gốc ra tệp `crossref_response.json` và lưu danh sách bản ghi đã parse ra tệp `crossref_records.json` để làm bộ nhớ đệm (caching).
 *   **Hàm `parse_crossref_payload`:** Phân tích cú pháp phản hồi thô của API, sử dụng biểu thức chính quy (regular expressions) loại bỏ triệt để các thẻ XML (ví dụ `<jats:p>`) trong phần tóm tắt để làm sạch văn bản thô, ánh xạ thành danh sách đối tượng cấu trúc `PaperRecord`.
 *   **Hàm `load_raw_records`:** Đọc từ bản chụp cache JSON trên đĩa để phục hồi danh sách `PaperRecord` mà không cần gọi API nhiều lần khi debug.
 
-### 2.2. Module Data Cleaning & Modeling ([cleaning.py](file:///e:/VinUni/Lab/Day%2010%20-%20Data%20Pipeline%20And%20Data%20Observability/Day-10-Data-Pipeline-Data-Observability/src/ingestion/cleaning.py))
+### 2.2. Module Data Cleaning & Modeling ([cleaning.py](src/ingestion/cleaning.py))
 *   **Hàm `build_clean_dataframe`:** Xử lý làm sạch và chuyển đổi cấu trúc dữ liệu thô sang Pandas DataFrame:
     1.  Chuẩn hóa khoảng trắng thừa trong tiêu đề và nội dung.
     2.  Tính toán độ tươi mới của tài liệu (`age_days` tính từ ngày xuất bản tới ngày chạy hiện tại).
@@ -34,10 +34,10 @@ Hệ thống được thiết kế theo dạng mô-đun hóa cao, tách biệt n
     5.  Loại bỏ trùng lặp khóa chính `paper_id` và tiêu đề `title`.
     6.  Sắp xếp tập dữ liệu theo ngày xuất bản giảm dần (ưu tiên bài báo mới nhất).
 
-### 2.3. Module Test Set Generation ([testset.py](file:///e:/VinUni/Lab/Day%2010%20-%20Data%20Pipeline%20And%20Data%20Observability/Day-10-Data-Pipeline-Data-Observability/src/evaluation/testset.py))
+### 2.3. Module Test Set Generation ([testset.py](src/evaluation/testset.py))
 *   **Hàm `build_test_set`:** Sinh tự động bộ câu hỏi đánh giá gồm 20 mẫu từ dữ liệu sạch của hệ thống. Bộ câu hỏi chia đều làm 4 nhóm chủ đề: Tác giả (`Who authored...`), Ngày xuất bản (`When was...`), Thể loại (`What categories...`), và Tóm tắt đóng góp. Ground truth của các câu hỏi được ánh xạ trực tiếp từ metadata sạch để đảm bảo tính xác thực khi chấm điểm.
 
-### 2.4. Module Data Quality & Observability ([quality.py](file:///e:/VinUni/Lab/Day%2010%20-%20Data%20Pipeline%20And%20Data%20Observability/Day-10-Data-Pipeline-Data-Observability/src/observability/quality.py))
+### 2.4. Module Data Quality & Observability ([quality.py](src/observability/quality.py))
 *   **Hàm `run_data_quality_checks`:** Chạy 5 bài kiểm tra chất lượng dữ liệu:
     1.  *Row count check:* Kiểm tra số lượng bản ghi (đảm bảo $\ge 3$ bản ghi).
     2.  *Unique IDs check:* Đảm bảo không trùng lặp và không trống ID.
@@ -46,11 +46,11 @@ Hệ thống được thiết kế theo dạng mô-đun hóa cao, tách biệt n
     5.  *Freshness check:* Đảm bảo tuổi dữ liệu nằm trong ngưỡng cho phép (180 ngày).
 *   **Hàm `build_freshness_report`:** Kết xuất báo cáo độ tươi mới của dữ liệu thô (ngày xuất bản mới nhất, cũ nhất, số lượng bản ghi bị quá hạn).
 
-### 2.5. Module Reporting ([reporting.py](file:///e:/VinUni/Lab/Day%2010%20-%20Data%20Pipeline%20And%20Data%20Observability/Day-10-Data-Pipeline-Data-Observability/src/observability/reporting.py))
+### 2.5. Module Reporting ([reporting.py](src/observability/reporting.py))
 *   **Hàm `generate_phase1_report`:** Tạo file markdown báo cáo baseline.
 *   **Hàm `generate_corruption_report`:** Tạo file markdown báo cáo so sánh đa trạng thái và nhúng trực quan hóa biểu đồ SVG.
 
-### 2.6. Module Data Corruption ([corruption.py](file:///e:/VinUni/Lab/Day%2010%20-%20Data%20Pipeline%20And%20Data%20Observability/Day-10-Data-Pipeline-Data-Observability/src/ingestion/corruption.py))
+### 2.6. Module Data Corruption ([corruption.py](src/ingestion/corruption.py))
 *   **Hàm `corrupt_clean_dataframe`:** Giả lập 6 sự cố dữ liệu thực tế:
     1.  Xóa 20% bản ghi mới nhất.
     2.  Làm trống (blank) một số tóm tắt.
@@ -60,7 +60,7 @@ Hệ thống được thiết kế theo dạng mô-đun hóa cao, tách biệt n
     6.  Nhân bản hàng gây trùng lặp dữ liệu.
     7.  Sinh lại cột `text_for_embedding` từ dữ liệu lỗi để phá hoại chỉ mục vector store.
 
-### 2.7. Module Pipelines Orchestration ([phase1.py](file:///e:/VinUni/Lab/Day%2010%20-%20Data%20Pipeline%20And%20Data%20Observability/Day-10-Data-Pipeline-Data-Observability/src/pipelines/phase1.py) & [corruption_flow.py](file:///e:/VinUni/Lab/Day%2010%20-%20Data%20Pipeline%20And%20Data%20Observability/Day-10-Data-Pipeline-Data-Observability/src/pipelines/corruption_flow.py))
+### 2.7. Module Pipelines Orchestration ([phase1.py](src/pipelines/phase1.py) & [corruption_flow.py](src/pipelines/corruption_flow.py))
 *   Lắp ráp toàn bộ các bước thành quy trình tự động hóa chạy một lệnh từ đầu đến cuối.
 
 ---
