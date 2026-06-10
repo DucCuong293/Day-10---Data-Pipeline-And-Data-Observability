@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Who authored the first paper?",
+    "answer": "Marcel Osmond",
+    "retrieved_titles": [
+      "Agentic AI, Retrieval-Augmented Generation, and the Institutional Turn: Legal Architectures and Financial Governance in the Age of Distributional AGI",
+      "Retrieval-Augmented Large Language Model Agents for Automated Scientific Literature Review Generation",
+      "Hybrid Graph Neural Network and Large Language Model Framework for Robust Knowledge Graph Question Answering via Retrieval-Augmented Generation",
+      "The Role of Retrieval-Augmented Generation in Improving Factual Accuracy for Medical Large Language Models"
+    ]
+  },
+  {
+    "question": "When was the latest paper published?",
+    "answer": "2026-04-06",
+    "retrieved_titles": [
+      "Retrieval-Augmented Large Language Model Agents for Automated Scientific Literature Review Generation",
+      "The Role of Retrieval-Augmented Generation in Improving Factual Accuracy for Medical Large Language Models",
+      "Hybrid Graph Neural Network and Large Language Model Framework for Robust Knowledge Graph Question Answering via Retrieval-Augmented Generation",
+      "Patch-Aware Retrieval-Augmented Generation for Large Language Model Decision Support in Transportation Infrastructure Delivery"
+    ]
+  },
+  {
+    "question": "What categories are covered by the corpus?",
+    "answer": "Uncategorized",
+    "retrieved_titles": [
+      "The Role of Retrieval-Augmented Generation in Improving Factual Accuracy for Medical Large Language Models",
+      "Speculative Retrieval-Augmented Generation for Cost-Efficient Large Language Model Inference",
+      "A Survey of Agentic GraphRAG: From Retrieval-augmented Generation to Graph-native Agents",
+      "Retrieval-Augmented Generation With Large Language Models"
+    ]
+  }
+]

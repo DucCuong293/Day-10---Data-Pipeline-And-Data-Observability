@@ -1,0 +1,182 @@
+[
+  {
+    "id": "q_001",
+    "question_type": "authors",
+    "question": "Who authored the paper 'Operationalizing Reliability Gaps in Large Language Models: A Semi-Systematic Evidence Map of Reasoning, Factuality, Evaluation, and Retrieval-Augmented Generation'?",
+    "ground_truth": "Kushal Budha, Nikesh Lagun",
+    "ground_truth_doc_ids": [
+      "10.21203/rs.3.rs-9882260/v1"
+    ]
+  },
+  {
+    "id": "q_002",
+    "question_type": "date",
+    "question": "When was the paper 'Operationalizing Reliability Gaps in Large Language Models: A Semi-Systematic Evidence Map of Reasoning, Factuality, Evaluation, and Retrieval-Augmented Generation' published?",
+    "ground_truth": "2026-06-02",
+    "ground_truth_doc_ids": [
+      "10.21203/rs.3.rs-9882260/v1"
+    ]
+  },
+  {
+    "id": "q_003",
+    "question_type": "categories",
+    "question": "What categories does the paper 'Operationalizing Reliability Gaps in Large Language Models: A Semi-Systematic Evidence Map of Reasoning, Factuality, Evaluation, and Retrieval-Augmented Generation' belong to?",
+    "ground_truth": "Uncategorized",
+    "ground_truth_doc_ids": [
+      "10.21203/rs.3.rs-9882260/v1"
+    ]
+  },
+  {
+    "id": "q_004",
+    "question_type": "summary",
+    "question": "What is the main contribution or summary of the paper 'Operationalizing Reliability Gaps in Large Language Models: A Semi-Systematic Evidence Map of Reasoning, Factuality, Evaluation, and Retrieval-Augmented Generation'?",
+    "ground_truth": "Abstract Large language models (LLMs) increasingly support reasoning, question answering, decision support, and retrieval-augmented knowledge work.",
+    "ground_truth_doc_ids": [
+      "10.21203/rs.3.rs-9882260/v1"
+    ]
+  },
+  {
+    "id": "q_005",
+    "question_type": "authors",
+    "question": "Who authored the paper 'Speculative Retrieval-Augmented Generation for Cost-Efficient Large Language Model Inference'?",
+    "ground_truth": "Dr. Sumalatha P, Manoj Kumar",
+    "ground_truth_doc_ids": [
+      "10.55041/isjem07213"
+    ]
+  },
+  {
+    "id": "q_006",
+    "question_type": "date",
+    "question": "When was the paper 'Speculative Retrieval-Augmented Generation for Cost-Efficient Large Language Model Inference' published?",
+    "ground_truth": "2026-05-06",
+    "ground_truth_doc_ids": [
+      "10.55041/isjem07213"
+    ]
+  },
+  {
+    "id": "q_007",
+    "question_type": "categories",
+    "question": "What categories does the paper 'Speculative Retrieval-Augmented Generation for Cost-Efficient Large Language Model Inference' belong to?",
+    "ground_truth": "Uncategorized",
+    "ground_truth_doc_ids": [
+      "10.55041/isjem07213"
+    ]
+  },
+  {
+    "id": "q_008",
+    "question_type": "summary",
+    "question": "What is the main contribution or summary of the paper 'Speculative Retrieval-Augmented Generation for Cost-Efficient Large Language Model Inference'?",
+    "ground_truth": "Abstract - This work focuses on the two crucial bottlenecks in Retrieval-Augmented Generation (RAG): high inference latency and expensive computation cost.",
+    "ground_truth_doc_ids": [
+      "10.55041/isjem07213"
+    ]
+  },
+  {
+    "id": "q_009",
+    "question_type": "authors",
+    "question": "Who authored the paper 'Clinical Large Language Models with Multi-Stage Instruction Tuning and Advanced Retrieval-Augmented Generation'?",
+    "ground_truth": "Donald Martin, Blake Bowman",
+    "ground_truth_doc_ids": [
+      "10.20944/preprints202602.0996.v1"
+    ]
+  },
+  {
+    "id": "q_010",
+    "question_type": "date",
+    "question": "When was the paper 'Clinical Large Language Models with Multi-Stage Instruction Tuning and Advanced Retrieval-Augmented Generation' published?",
+    "ground_truth": "2026-02-12",
+    "ground_truth_doc_ids": [
+      "10.20944/preprints202602.0996.v1"
+    ]
+  },
+  {
+    "id": "q_011",
+    "question_type": "categories",
+    "question": "What categories does the paper 'Clinical Large Language Models with Multi-Stage Instruction Tuning and Advanced Retrieval-Augmented Generation' belong to?",
+    "ground_truth": "Uncategorized",
+    "ground_truth_doc_ids": [
+      "10.20944/preprints202602.0996.v1"
+    ]
+  },
+  {
+    "id": "q_012",
+    "question_type": "summary",
+    "question": "What is the main contribution or summary of the paper 'Clinical Large Language Models with Multi-Stage Instruction Tuning and Advanced Retrieval-Augmented Generation'?",
+    "ground_truth": "The demand for efficient and accurate Clinical Decision Support Systems (CDSS) is growing rapidly, driven by the escalating volume of medical data.",
+    "ground_truth_doc_ids": [
+      "10.20944/preprints202602.0996.v1"
+    ]
+  },
+  {
+    "id": "q_013",
+    "question_type": "authors",
+    "question": "Who authored the paper 'A Survey of Agentic GraphRAG: From Retrieval-augmented Generation to Graph-native Agents'?",
+    "ground_truth": "Zihan Chen, Lei Zheng, Di Zhu",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.6713979"
+    ]
+  },
+  {
+    "id": "q_014",
+    "question_type": "date",
+    "question": "When was the paper 'A Survey of Agentic GraphRAG: From Retrieval-augmented Generation to Graph-native Agents' published?",
+    "ground_truth": "2026-01-01",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.6713979"
+    ]
+  },
+  {
+    "id": "q_015",
+    "question_type": "categories",
+    "question": "What categories does the paper 'A Survey of Agentic GraphRAG: From Retrieval-augmented Generation to Graph-native Agents' belong to?",
+    "ground_truth": "Uncategorized",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.6713979"
+    ]
+  },
+  {
+    "id": "q_016",
+    "question_type": "summary",
+    "question": "What is the main contribution or summary of the paper 'A Survey of Agentic GraphRAG: From Retrieval-augmented Generation to Graph-native Agents'?",
+    "ground_truth": "&lt;div&gt; This survey provides a comprehensive analysis of Agentic GraphRAG, an emerging paradigm that integrates Graph-based Retrieval-Augmented Generation (RAG) with Agentic RAG.&amp;nbsp;&lt;span&gt;While large language models know a lot, their knowledge is frozen at training time and they often suffer from hallucinations.",
+    "ground_truth_doc_ids": [
+      "10.2139/ssrn.6713979"
+    ]
+  },
+  {
+    "id": "q_017",
+    "question_type": "authors",
+    "question": "Who authored the paper 'Retrieval-Augmented Generation With Large Language Models'?",
+    "ground_truth": "Dena Abu Laila, Qais Al-Na'amneh, Mahmoud Aljawarneh, Walid Dhifallah, Khaled Maabreh",
+    "ground_truth_doc_ids": [
+      "10.4018/979-8-3373-5017-2.ch003"
+    ]
+  },
+  {
+    "id": "q_018",
+    "question_type": "date",
+    "question": "When was the paper 'Retrieval-Augmented Generation With Large Language Models' published?",
+    "ground_truth": "2025-12-19",
+    "ground_truth_doc_ids": [
+      "10.4018/979-8-3373-5017-2.ch003"
+    ]
+  },
+  {
+    "id": "q_019",
+    "question_type": "categories",
+    "question": "What categories does the paper 'Retrieval-Augmented Generation With Large Language Models' belong to?",
+    "ground_truth": "Uncategorized",
+    "ground_truth_doc_ids": [
+      "10.4018/979-8-3373-5017-2.ch003"
+    ]
+  },
+  {
+    "id": "q_020",
+    "question_type": "summary",
+    "question": "What is the main contribution or summary of the paper 'Retrieval-Augmented Generation With Large Language Models'?",
+    "ground_truth": "Retrieval-Augmented Generation (RAG) has emerged as a transformative approach for enhanc-ing large language models (LLMs) by integrating external knowledge sources to address limitations in parametric knowledge and factual accuracy.",
+    "ground_truth_doc_ids": [
+      "10.4018/979-8-3373-5017-2.ch003"
+    ]
+  }
+]

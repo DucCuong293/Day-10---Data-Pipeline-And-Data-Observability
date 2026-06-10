@@ -1,0 +1,18 @@
+{
+  "report_name": "corrupted_quality",
+  "total_rows": 21,
+  "missing_paper_ids": 0,
+  "duplicate_paper_ids": 2,
+  "missing_titles": 0,
+  "avg_summary_chars": 1418.2857142857142,
+  "too_short_summaries": 4,
+  "stale_rows": 2,
+  "passed_checks": {
+    "row_count": true,
+    "unique_ids": false,
+    "no_null_titles": true,
+    "summary_length": false,
+    "freshness": false
+  },
+  "all_passed": false
+}
